@@ -1,0 +1,593 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+// BASIC STYLES
+@font-face {
+    font-family: 'akkurat';
+    src: url('../AkkuratBold-Bold3.woff') format('woff');
+    font-weight:bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'akkurat';
+    src: url('../Akkurat.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+html, body {
+  font-size: 18px;
+  margin: 0px;
+  @include mobile {
+    font-size: 15px;
+  }
+  line-height: 2;
+  letter-spacing: 0.01em;
+  font-family: 'akkurat', helvetica, sans-serif;
+  font-weight: 300;
+  color: #0F1F3E;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1em;
+  font-weight: inherit;
+  margin: 0px;
+  color: #0F1F3E;
+}
+
+a {
+	text-decoration: none;
+	  color: #0F1F3E;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+/* No list style for lists except in RTE content. */
+ul, ol {
+  list-style-type: none;
+
+  padding: 0;
+}
+
+.rte p {
+  // max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+.rte p+p {
+  margin-top: 0.5em !important;
+
+}
+
+.rte a {
+  border-bottom: 0ps solid rgba(0,0,0,0) !important;
+}
+
+img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.entry-content {
+	padding-right: 4vw;
+	padding-left: 4vw;
+}
+.site-main {
+	min-height: calc(100vh - 10vh);
+}
+
+// NAVIGATION / HEADER
+.main-nav {
+	ul {
+	width: 100%;
+	@include flexbox();
+	@include justify-content(space-between);
+	padding: 2vw;
+	padding-right: 4vw;
+	padding-left: 4vw;
+	z-index: 999999999999999999999999999999999999999999;
+	li {
+		// @include flex(1 1 auto);
+	}
+	a {
+		font-size: 1.5em;
+		font-weight: 500;
+		letter-spacing: 0.05em;
+		color: #0F1F3E;
+		@include mobile {
+			font-size: 1em;
+		}
+	}
+	@include mobile {
+		width:90%;
+		margin: 0 auto;
+	}
+	}
+}
+
+
+// LANDING PAGE HEADER
+.custom-background {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	height: 100vh !important;
+	width: 100vw !important;
+}
+
+.landing-page {
+	@include flexbox();
+	@include justify-content(center);
+	padding: 2vw;
+	min-height: 100vh;
+	@include mobile {
+		@include align-items(center);
+	}
+	h1 {
+		text-transform: uppercase;
+		margin: 0!important;
+		font-size: 4em;
+		z-index: 999;
+		font-weight: bold;
+		letter-spacing: 0.05em;
+		@include mobile {
+			font-size: 2.5em;
+			text-align: center;
+		}
+	}
+}
+
+.landing-page-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	img {
+		height: 100vh !important;
+		width:100%;
+		object-fit: cover;
+	}
+}
+
+// POSTS WIDGET
+#custom-home-listings .chw-widget{
+	@include flexbox();
+	@include flex-direction(column);
+	@include align-items (center);
+	@include justify-content(center);
+}
+
+// LANDING PAGE INFO
+.our-story {
+	max-width: 920px;
+	margin: 0 auto;
+	padding-right: 4vw;
+	padding-left: 4vw;
+	padding-bottom: 4vw;
+	margin-top: 6em;
+	@include mobile {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+	h2 {
+		text-align: center;
+		font-size: 2em;
+		font-weight: 500;
+		letter-spacing: 0.05em;
+	}
+}
+
+#custom-home-listings {
+	p {
+	font-size: 2.5em;
+    font-weight: 500;
+    letter-spacing: .05em;
+    color: #0F1F3E;
+    margin: 0;
+    @include mobile {
+    	font-size:1.5em;
+    }
+	}
+}
+
+header#main-header {
+	padding: 0 4vw;
+	@include flexbox();
+	@include flex-direction(row);
+	@include justify-content(space-between);
+	@include align-items(center);
+	position: sticky;
+	top: 0;
+	height: 100px;
+	font-size: 28px;
+	z-index: 100;
+
+	h1 {
+		@include flexbox();
+		@include align-items(center);
+	}
+
+	.main-nav-menu-dropdowns > ul {
+		@include flexbox();
+		@include flex-direction(row);
+		@include justify-content(space-between);
+		@include align-items(center);
+
+		.sub-menu {
+			position: absolute;
+		}
+	}
+}
+// Grid
+
+.grid {
+	padding-left: 4vw;
+	padding-right: 4vw;
+	@include flexbox();
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
+	@include justify-content(space-between);
+	margin: 0;
+
+	.grid-item {
+		text-align:center;
+		padding-bottom: 3vw;
+
+		.grid-item-image-wrap {
+      background-color: #0F1F3E;
+
+			img {
+				opacity: 1;
+				transition: 0.3s ease;
+				height: 30vw;
+				width: 43vw;
+				display: block;
+				@include mobile {
+					height: 80vw;
+					width: 100%;
+				}
+			}
+   	}
+   	.grid-item-title {
+   		letter-spacing: 0.03em;
+      font-size: 18px;
+      font-weight: 500;
+      padding-top: 1vw;
+      transition: 300ms opacity linear;
+   	}
+	}
+	&:hover .grid-item:not(:hover) {
+		img {
+			opacity: 0.3
+		}
+
+		.grid-item-title {
+			opacity: 0
+		}
+	}
+}
+
+// just for now (until we figure out the menu thing)
+.navbar {
+	display:none;
+}
+
+// SINGLE POST PAGE
+// IF WANT TO DO OVERLAY
+#overlay {
+	display: block;
+	    position: fixed;
+	    width: 100%;
+	    height: 100%;
+	    left: 0;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    transition: 500ms opacity linear;
+	    z-index: 1000;
+	    opacity: 0;
+	    will-change: opacity;
+	    pointer-events: none;
+	    cursor: pointer;
+}
+
+#overlay.show {
+	opacity: 1;
+	pointer-events: all;
+}
+.landing-nav {
+	#menu-main-menu {
+	position: absolute;
+	@include mobile {
+		width:100% !important;
+	}
+}
+}
+
+.hero-landing-location-page {
+	height: 100vh;
+    width: 100vw;
+    padding: 0px;
+    margin: 0px;
+    img {
+    	height:100%;
+    }
+}
+.main-post-layout {
+	@include flexbox();
+	@include flex-direction(row);
+	.post-text-content {
+		width: 35%;
+		padding-right: 2vw;
+		h1 {
+			font-size: 1.2em;
+			font-weight: 500;
+			@include mobile {
+				font-size: 1em;
+			}
+		}
+		@include mobile {
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
+	.post-gallery-content {
+		width: 65%;
+		img {
+			height: 40vw;
+			@include mobile {
+				height: 100vw;
+			}
+		}
+		@include mobile {
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
+	@include mobile {
+		@include flex-wrap(wrap);
+	}
+
+	.product-photos {
+		margin-top: 0px;
+	}
+}
+	// SLIDER
+
+	.slide-count-wrap {
+		position: relative;
+		text-align: right;
+	}
+.single-image {
+	padding-bottom: 4vw;
+}
+// FOOTER HOMEPAGE
+.footer-widget {
+	background: #0F1F3E;
+	padding-top: 2vw;
+	padding-bottom: 2vw;
+
+	.textwidget{
+	color: white;
+	max-width: 920px;
+	margin: 0 auto;
+	padding-right: 4vw;
+	padding-left: 4vw;
+	-webkit-font-smoothing: antialiased;
+	a {
+		color: white;
+	}
+	p {
+		margin: 0;
+	}
+
+	@include mobile {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+}
+}
+
+
+// CATEGORY NAV
+.main-nav-menu-dropdowns {
+	@include flex-basis(33%);
+	max-width: 600px;
+
+	li.menu-item-has-children > a:focus + ul.sub-menu{
+		visibility: visible;
+	}
+
+	li.menu-item-has-children > a {
+		max-width: 20vw;
+		width: 200px;
+		display: block;
+	}
+
+	ul.sub-menu {
+		@include flexbox();
+		@include flex-direction(column);
+		margin:0;
+		padding:0;
+		visibility: hidden;
+		position: absolute;
+		max-height: 75vh;
+		overflow: auto;
+		background: white;
+		width: auto;
+		transition: visibility 0 linear 50ms;  // Important so it doesn't close when you try to click
+		-webkit-transition: visibility 0 linear 50ms;
+		-moz-transition: visibility 0 linear 50ms;
+		-ms-transition: visibility 0 linear 50ms;
+		li {
+			margin:0;
+			padding:0;
+			list-style:none;
+			border: 1px solid;
+			transition: 0.3s all;
+			background: white;
+			&:hover {
+				background: #0F1F3E;
+				a {
+					color: white;
+				}
+			}
+		}
+
+		a {
+			padding: .5em 1em;
+		}
+	}
+}
+
+.category .site-main{
+	// padding-top:10vw;
+}
+
+// QUICK MOBILE CHANGES
+@include mobile {
+	.page-title {
+	padding-right: 4vw;
+    padding-left: 4vw;
+    width: 90%;
+    margin: 0 auto;
+	}
+}
+
+// .slide-count-wrap {
+// 	display:none;
+// }
+.multiple-images {
+	.slide-count-wrap {
+		display:block;
+	}
+}
+
+// DEFAULT PAGE
+.page-template-default .site-main{
+	@include flexbox();
+	@include flex-direction(column);
+	@include align-items(center);
+	max-width: 920px;
+	margin: 0 auto;
+	padding-right: 4vw;
+	padding-left: 4vw;
+	padding-bottom: 4vw;
+	@include mobile {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+	h1 {
+		text-align: center;
+		font-size: 2em;
+		font-weight: 500;
+		letter-spacing: 0.05em;
+	}
+
+}
+
+
+// 404 PAGE
+.search {
+	@include flexbox();
+	@include flex-direction(column);
+	@include align-items(center);
+	max-width: 920px;
+	margin: 0 auto;
+	padding-right: 4vw;
+	padding-left: 4vw;
+	padding-bottom: 4vw;
+	@include mobile {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+	form {
+		@include flexbox();
+		@include justify-content(space-evenly);
+		width: 100%;
+	}
+}
+.error {
+	text-align:center;
+	padding: 4vw;
+}
+
+
+.homepage-activity-listing h3 {
+	text-align: center;
+	font-size: 30px;
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+
+
+.intro-slide {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	padding-top: 5vh;
+	cursor: pointer;
+
+	.intro-slide-image {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+    background-size: cover;
+    background-position: center center;
+    z-index: 10;
+	}
+
+	h1 {
+		font-size: 80px;
+		z-index: 20;
+		position: relative;
+		font-weight: bold;
+		padding-left: 4vw;
+	}
+}
+
+// SINGLE POST FEATURED IMAGE / NAV
+
+.single-post {
+	#main-header {
+		position: fixed;
+		width: 100%;
+	}
+	.intro-slide-image {
+		height:100%;
+	}
+	.entry-content {
+		margin-top: 10vw !important;
+	}
+}
+
+.main-nav-menu {
+	position: fixed;
+	    z-index: 99999999999999999999999999;
+	    top: 4vw;
+	    right: 4vw;
+	    ul {
+	    	display: flex;
+	    	    flex-direction: row;
+	    	    li {
+	    	    	margin:10px;
+	    	    }
+	    	    a {
+	    	    	font-size:0.85em;
+	    	    }
+	    }
+}
+
+.home {
+	#main-header {
+		height: auto;
+		h1 {
+			display:none;
+		}
+	}
+}
