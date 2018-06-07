@@ -52,36 +52,14 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 
 		register_sidebar( array(
-			'name'          => __( 'Hero Slider', 'understrap' ),
-			'id'            => 'hero',
-			'description'   => 'Hero slider area. Place two or more widgets here and they will slide!',
-			'before_widget' => '<div class="carousel-item">',
-			'after_widget'  => '</div>',
-			'before_title'  => '',
-			'after_title'   => '',
-		) );
-
-		register_sidebar( array(
-			'name'          => __( 'Footer Full', 'understrap' ),
-			'id'            => 'footerfull',
-			'description'   => 'Widget area below main content and above footer',
-		    'before_widget'  => '<div id="%1$s" class="footer-widget %2$s '. slbd_count_widgets( 'footerfull' ) .'">',
+			'name'          => __( 'Intro Slide', 'understrap' ),
+			'id'            => 'introslide',
+			'description'   => 'area on intro slide',
+		    'before_widget'  => '<div id="%1$s" class="widget %2$s">',
 		    'after_widget'   => '</div><!-- .footer-widget -->',
 		    'before_title'   => '<h3 class="widget-title">',
 		    'after_title'    => '</h3>',
 		) );
-		    register_sidebar( array(
-		        'name'          => 'Custom Header Widget Area',
-		        'id'            => 'custom-header-widget',
-		        'before_widget' => '<div class="chw-widget">',
-		        'after_widget'  => '</div>',
-		    ) );
-		   register_sidebar( array(
-		       'name'          => 'Homepage Listings',
-		       'id'            => 'custom-home-listings',
-		       'before_widget' => '<div class="chw-widget">',
-		       'after_widget'  => '</div>',
-		   ) );
 
 	}
 } // endif function_exists( 'understrap_widgets_init' ).

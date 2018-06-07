@@ -7,7 +7,7 @@
 
 ?>
 
-<li class="grid-item" id="post-<?php the_ID(); ?>">
+<li class="grid-item location" id="post-<?php the_ID(); ?>">
 	<?php
 
 		$post_image = get_the_post_thumbnail( $post->ID, 'large' );
@@ -32,9 +32,13 @@
 				}
 			} ?>
 		</div>
-
+		<div class="grid-text">
 		<?php the_title( sprintf( '<div class="grid-item-title">', esc_url( get_permalink() ) ),
 			'</div>' ); ?>
+			<div class="event-description">
+             <?php the_content(); ?>
+           </div>
+           </div>
 	</a>
 
 

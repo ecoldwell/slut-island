@@ -259,12 +259,6 @@ gulp.task('copy-assets', ['clean-source'], function() {
     gulp.src(basePaths.node + 'undescores-for-npm/js/*.js')
         .pipe(gulp.dest(basePaths.dev + '/js'));
 
-// Copy Popper JS files
-    gulp.src(basePaths.node + 'popper.js/dist/umd/popper.min.js')
-        .pipe(gulp.dest(basePaths.js));
-
-    gulp.src(basePaths.node + 'popper.js/dist/umd/popper.js')
-        .pipe(gulp.dest(basePaths.js));
     return stream;
 });
 

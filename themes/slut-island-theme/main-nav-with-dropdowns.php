@@ -1,6 +1,6 @@
 <header id="main-header">
   <h1>
-    <a href="/">Robbins Locations</a>
+    <a href="/">SLUT ISLAND</a>
   </h1>
 
   <?php wp_nav_menu(

@@ -40,14 +40,6 @@ if ( ! function_exists( 'understrap_setup' ) ) :
 		 */
 		add_theme_support( 'title-tag' );
 
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'understrap' ),
-		) );
-
-		register_nav_menus( array(
-			'location-finding-menu' => __( 'Location Finding Menu', 'understrap' ),
-		) );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -84,10 +76,10 @@ if ( ! function_exists( 'understrap_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'understrap_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
+		// add_theme_support( 'custom-background', apply_filters( 'understrap_custom_background_args', array(
+		// 	'default-color' => 'ffffff',
+		// 	'default-image' => '',
+		// ) ) );
 
 		// Set up the Wordpress Theme logo feature.
 		add_theme_support( 'custom-logo' );

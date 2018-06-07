@@ -33,9 +33,6 @@ $container = get_theme_mod( 'understrap_container_type' );
         </section>
       <?php } ?>
 
-
-<?php get_sidebar( 'footerfull' ); ?>
-
 <div class="wrapper" id="wrapper-footer">
 
 	<div class="<?php echo esc_attr( $container ); ?>">
@@ -45,7 +42,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-12 footer-home">
 
 				<footer class="site-footer" id="colophon">
-
+          <a href="mailto:info@robbinslocations.com" class="contact-link">Contact</a>
 				</footer><!-- #colophon -->
 
 			</div><!--col end -->

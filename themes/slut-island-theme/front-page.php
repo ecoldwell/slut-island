@@ -2,13 +2,8 @@
   <?php if (get_theme_mod('understrap_intro_image')) { ?>
     <div class="intro-slide homepage-intro-slide">
       <div class="intro-slide-image" style="background-image:url('<?php echo get_theme_mod('understrap_intro_image') ?>')"></div>
-      <h1>SLUT ISLAND</h1>
     </div>
   <?php get_template_part( 'main-nav' ); ?>
   <?php } ?>
-
-
-
-
 
 <?php get_footer() ?>
